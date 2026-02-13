@@ -1,0 +1,241 @@
+/* Jerry Lee's Cajun Foods - Custom Styles */
+
+:root {
+    --smokehouse-brown: #3E2723;
+    --light-brown: #5D4037;
+    --cayenne-red: #D32F2F;
+    --cayenne-red-dark: #B71C1C;
+    --goldenrod: #DAA520;
+    --goldenrod-light: #F4D03F;
+    --cream: #FFF8DC;
+    --warm-white: #FFFAF0;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--warm-white) 0%, var(--cream) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233E2723' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.text-smokehouse {
+    color: var(--smokehouse-brown);
+}
+
+.text-cayenne {
+    color: var(--cayenne-red);
+}
+
+.text-goldenrod {
+    color: var(--goldenrod);
+}
+
+.bg-smokehouse {
+    background-color: var(--smokehouse-brown);
+}
+
+.bg-cayenne {
+    background-color: var(--cayenne-red);
+}
+
+.bg-goldenrod {
+    background-color: var(--goldenrod);
+}
+
+.bg-cream {
+    background-color: var(--cream);
+}
+
+.btn-primary {
+    background-color: var(--cayenne-red);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--cayenne-red-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--light-brown);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--smokehouse-brown);
+    transform: translateY(-2px);
+}
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(62, 39, 35, 0.15);
+}
+
+.product-card img {
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(62, 39, 35, 0.1);
+}
+
+.section-padding {
+    padding: 5rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 3rem 1rem;
+    }
+}
+
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--goldenrod-light) 0%, var(--goldenrod) 100%);
+    color: var(--smokehouse-brown);
+    margin: 0 auto 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: -2rem;
+    width: 2px;
+    background-color: var(--goldenrod);
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--cayenne-red);
+    border: 3px solid var(--warm-white);
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.badge-popular {
+    background-color: var(--cayenne-red);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+}
+
+.badge-bestseller {
+    background-color: var(--goldenrod);
+    color: var(--smokehouse-brown);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+}
+
+.contact-info-card {
+    background: white;
+    border-left: 4px solid var(--cayenne-red);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-info-card:hover {
+    border-color: var(--goldenrod);
+    transform: translateX(4px);
+}
+
+.newsletter-section {
+    background: linear-gradient(135deg, var(--smokehouse-brown) 0%, var(--light-brown) 100%);
+    color: white;
+}
+
+.social-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: var(--goldenrod);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Image placeholder styling */
+.image-placeholder {
+    background: linear-gradient(135deg, #E0E0E0 0%, #F5F5F5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9E9E9E;
+    font-weight: 600;
+}
+
+/* Loading animation for images */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading-shimmer {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(to right, #F5F5F5 4%, #E0E0E0 25%, #F5F5F5 36%);
+    background-size: 1000px 100%;
+}
