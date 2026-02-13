@@ -46,7 +46,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link to="/products" className="text-sm text-gray-300 hover:text-goldenrod transition-colors duration-300">
-                  Products
+                  Menu
                 </Link>
               </li>
               <li>
@@ -134,9 +134,6 @@ export const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400 text-center md:text-left">
               © {new Date().getFullYear()} Jerry Lee's Cajun Foods. All rights reserved.
-            </p>
-            <p className="text-sm text-gray-400 text-center md:text-right">
-              Made with <span className="text-cayenne">❤</span> in Baton Rouge, Louisiana
             </p>
           </div>
         </div>
